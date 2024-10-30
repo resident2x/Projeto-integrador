@@ -25,19 +25,39 @@ def index():
     <title>Previsão de Valores</title>
     <style>
      body{
-         height:100dvh;
-         display:flex;
-         flex-direction:column;
-         justify-content:center;
-         align-items:center; 
-         font-family:;
-     }
+        height:100dvh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center; 
+        font-family: Arial, Helvetica, sans-serif ;
+        background: #0B3F7C;
+        color: #f2f2f2;     
+        }
+    form{
+        display:flex;
+        flex-direction:column;
+        font-size: 3dvh;
+    }
+    input{
+        all:inherit;
+        border: #f2f2f2 solid .3dvh;
+        border-radius: .6dvh;
+        padding: 1dvh 2dvh;
+    }
+    input[type=submit]{
+        background:#D03E3C;
+        text-align: center;
+        font-size: 2.6dvh;
+        cursor: pointer;
+    }
     </style>
     </head>
-    <body class="bg-info-subtle">
+    <body>
         <h1>Prever o Valor das Pizzas</h1>
         <form action="/" method="post">
-            Tamanho da Pizza: <input type="number" name="tamanho"><br>
+            <p>Tamanho da Pizza:</p>
+            <input type="number" name="tamanho"><br>
             <input type="submit" value="Prever Valor">
         </form>
         {% if resultado %}
